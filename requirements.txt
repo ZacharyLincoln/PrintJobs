@@ -1,0 +1,5 @@
+requests~=2.28.1
+certifi~=2022.6.15
+pymongo~=4.1.1
+paramiko~=2.11.0
+scp~=0.14.4
