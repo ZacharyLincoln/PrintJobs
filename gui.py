@@ -97,9 +97,9 @@ nozzle_label = tk.Label(root, text="Nozzle", width=4)
 nozzle_label.grid(row=2, column=2, sticky="", columnspan=1)
 
 # nozzle drop down
-nozzle = ["0.4", "1.0"]
+nozzle = ["None"]
 clicked_nozzle = tk.StringVar()
-clicked_nozzle.set("0.4")
+clicked_nozzle.set("None")
 
 nozzle_drop_down = tk.OptionMenu(root, clicked_nozzle, *nozzle)
 nozzle_drop_down.grid(row=2, column=3, sticky="", columnspan=1)
@@ -216,6 +216,9 @@ printer_tree.grid(row=5, column=4, columnspan=2, rowspan=3)
 
 # refresh jobs
 def refresh_job_tree():
+    colors = []
+    nozzle = []
+
     for item in job_tree.get_children():
         job_tree.delete(item)
     print_jobs = PrintJob.download_all()
@@ -228,8 +231,28 @@ def refresh_job_tree():
     printers = Printer.download_all()
 
     for printer in printers:
-        printer_tree.insert('', 'end', text="100", values=(
-        str(printer.ip).replace("http://", ""), printer.is_printing(), printer.get_bed_temp(), printer.color, printer.nozzle_size))
+        printer_tree.insert('', 'end', text="100", values=(str(printer.ip).replace("http://", ""), printer.is_printing(), printer.get_bed_temp(), printer.color, printer.nozzle_size))
+        print(printer.color)
+        if printer.color not in colors:
+            colors.append(printer.color)
+
+        if printer.nozzle_size not in nozzle:
+            nozzle.append(printer.nozzle_size)
+
+    print(nozzle)
+
+    global color_drop_down
+    global nozzle_drop_down
+
+    color_drop_down = tk.OptionMenu(root, clicked_color, *colors)
+    color_drop_down.grid(row=1, column=3, sticky="", columnspan=1)
+
+    nozzle_drop_down = tk.OptionMenu(root, clicked_nozzle, *nozzle)
+    nozzle_drop_down.grid(row=2, column=3, sticky="", columnspan=1)
+
+
+
+
 
 
 refresh_job_tree()

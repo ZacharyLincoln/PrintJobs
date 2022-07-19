@@ -32,7 +32,9 @@
 * Distributed print jobs
 * Print job balancing
 
-## Demo
+## GUI
+
+![screenshot](./readme_assets/rp/RP-1.png)
 
 ## Database Setup
 
@@ -196,10 +198,45 @@ Step 3: Click "Refresh" on the bottom right to reload the printers.
 
 ### Remove print script
 ![screenshot](./readme_assets/remove.gif)
+
 ### Add print job
 
-### Remove print job
+<details>
+<summary>How to Add a print job</summary>
 
+Step 1: Click on the file you wish to print
+
+![screenshot](./readme_assets/ap/AP-1.png)
+
+Step 2: Enter the quantity you wish to print
+
+![screenshot](./readme_assets/ap/AP-2.png)
+
+Step 3: Select the color you want the print to be printed in, and the correct nozzle size for the file.
+
+![screenshot](./readme_assets/ap/AP-4.png)
+
+Step 4: Click "Add --->"
+
+![screenshot](./readme_assets/ap/AP-5.png)
+
+![screenshot](./readme_assets/ap/AP-6.png)
+
+</details>
+
+### Remove print job
+<details>
+<summary>How to Remove a print job</summary>
+
+Step 1: Click the job you wish to remove
+
+![screenshot](./readme_assets/rp/RP-2.png)
+
+Step 2: Click "<--- Remove"
+
+![screenshot](./readme_assets/rp/RP-3.png)
+
+</details>
 
 ## License
 
