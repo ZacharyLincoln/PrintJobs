@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">A 3D printer automation solution for high production print farms.</h4>
+<h4 align="center", id="desc">A 3D printer automation solution for high production print farms.</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
