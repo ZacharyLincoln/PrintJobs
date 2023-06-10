@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <img src="readme_assets/logo.png" alt="Logo" width="200">
+  <img id="logo" src="readme_assets/logo.png" alt="Logo" width="200">
   <br>
   Print Jobs
   <br>
